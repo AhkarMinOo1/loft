@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Editor</title>
+    <link rel="stylesheet" href="src/css/ui.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Toggle Button (now outside sidebar) -->
+        <button class="sidebar-toggle" id="sidebar-toggle">
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </button>
+        
+        <!-- Collapsible Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-content">
+                <h2 class="sidebar-title">Object Library</h2>
+                <div class="library-grid" id="library-items"></div>
+            </div>
+        </aside>
+    
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="toolbar">
+                <button class="toolbar-btn" id="remove-object">🗑 Remove</button>
+                <button class="toolbar-btn" id="switch-direction">↔ Direction</button>
+            </div>
+            <script type="module" src="src/scripts/main.js"></script>
+        </main>
+        <div class="file-controls">
+            <button id="save-btn" class="tool-btn">💾 Save</button>
+            <button id="load-btn" class="tool-btn">📂 Load</button>
+            <input type="file" id="file-input" hidden accept=".3dscene">
+          </div>
+    </div>
+    
+</body>
+</html>
