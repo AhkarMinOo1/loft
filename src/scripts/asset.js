@@ -41,10 +41,11 @@ export async function table(scene) {
                 }
             });
             group.position.set(0, 0.01, 0);
+// In table function:
             group.userData = {
                 isMovable: true,
-                isChair: true,
-                isRotatable: true // Add rotation flag
+                isFurniture: true, // Changed from isChair
+                isRotatable: true
             };
             scene.add(group);
         }

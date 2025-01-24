@@ -1,4 +1,4 @@
-import { chair , table } from './asset.js';
+import { chair, table } from './asset.js';
 import * as THREE from 'three';
 import { WallManager } from './wallManager.js';
 
@@ -28,8 +28,14 @@ export class UIManager {
         this.toggleButton = document.getElementById('sidebar-toggle');
         this.removeButton = document.getElementById('remove-object');
 
+        // Bind event handlers
+        this.handleMouseMove = this.handleMouseMove.bind(this);
+        this.handleMouseDown = this.handleMouseDown.bind(this);
+        this.stopDragging = this.stopDragging.bind(this);
+
         // Initialize UI components
         this.initializeUI();
+        this.initFileHandlers();
     }
 
     initializeUI() {
@@ -68,7 +74,7 @@ export class UIManager {
             },
             {
                 name: 'Table',
-                thumbnail: 'assets/thumbnails/table.jpg', // Add table thumbnail
+                thumbnail: 'assets/thumbnails/table.jpg',
                 action: async () => {
                     const tableModel = await table(this.scene);
                     if (tableModel) {
@@ -112,18 +118,19 @@ export class UIManager {
             this.isRemoveMode = !this.isRemoveMode;
             document.body.classList.toggle('remove-mode', this.isRemoveMode);
             this.removeButton.classList.toggle('remove-active', this.isRemoveMode);
-            if (this.isRemoveMode) this.wallManager.toggleAddWallMode(false);
+            if (this.isRemoveMode) {
+                this.wallManager.toggleAddWallMode(false); // Force disable wall mode
+            }
         });
-
         // Wall direction switcher
         document.getElementById('switch-direction').addEventListener('click', () => {
             this.wallManager.switchDirection();
         });
 
         // Mouse interactions
-        this.renderer.domElement.addEventListener('mousemove', (e) => this.handleMouseMove(e));
-        this.renderer.domElement.addEventListener('mousedown', (e) => this.handleMouseDown(e));
-        window.addEventListener('mouseup', () => this.stopDragging());
+        this.renderer.domElement.addEventListener('mousemove', this.handleMouseMove);
+        this.renderer.domElement.addEventListener('mousedown', this.handleMouseDown);
+        window.addEventListener('mouseup', this.stopDragging);
     }
 
     handleMouseMove(event) {
@@ -142,7 +149,6 @@ export class UIManager {
         } else if (this.wallManager.isAddWallMode) {
             this.wallManager.handleMouseDown(event, this.camera);
         } else {
-            // Check for rotation input (right-click or shift+left-click)
             const isRotation = event.button === 2 || event.shiftKey;
             this.handleObjectSelection(event, isRotation);
         }
@@ -284,14 +290,188 @@ export class UIManager {
                object?.userData?.isChair || 
                object?.userData?.isFurniture ? object : null;
     }
+
     disposeObject(object) {
-        if (object.geometry) object.geometry.dispose();
-        if (object.material) {
-            if (Array.isArray(object.material)) {
-                object.material.forEach(m => m.dispose());
-            } else {
-                object.material.dispose();
+        object.traverse(child => {
+            if (child.isMesh) {
+                if (child.geometry) child.geometry.dispose();
+                if (child.material) {
+                    if (Array.isArray(child.material)) {
+                        child.material.forEach(m => m.dispose());
+                    } else {
+                        child.material.dispose();
+                    }
+                }
             }
+        });
+    }
+
+    initFileHandlers() {
+        const saveBtn = document.getElementById('save-btn');
+        const loadBtn = document.getElementById('load-btn');
+        const fileInput = document.getElementById('file-input');
+
+        if (saveBtn) {
+            saveBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.saveScene();
+            });
+        }
+
+        if (loadBtn && fileInput) {
+            loadBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                fileInput.click();
+            });
+        }
+
+        if (fileInput) {
+            fileInput.addEventListener('change', (e) => {
+                const file = e.target.files[0];
+                if (file) this.loadScene(file);
+            });
+        }
+    }
+
+    saveScene() {
+        try {
+            const sceneData = {
+                version: 2,
+                objects: []
+            };
+
+            this.scene.traverse(obj => {
+                if (obj.userData?.isMovable || obj.userData?.isWall) {
+                    const objData = {
+                        type: obj.userData.isWall ? 'wall' : 'furniture',
+                        uuid: obj.uuid,
+                        position: obj.position.toArray(),
+                        rotation: {
+                            x: obj.rotation.x,
+                            y: obj.rotation.y,
+                            z: obj.rotation.z,
+                            order: obj.rotation.order
+                        },
+                        scale: obj.scale.toArray(),
+                        userData: obj.userData
+                    };
+
+                    if (obj.userData.isWall) {
+                        objData.direction = this.wallManager.direction;
+                        objData.start = this.wallManager.currentWallStart?.toArray() || [0, 0, 0];
+                        objData.end = obj.position.toArray();
+                    }
+
+                    sceneData.objects.push(objData);
+                }
+            });
+
+            const blob = new Blob([JSON.stringify(sceneData, null, 2)], { type: 'application/json' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = `scene-${Date.now()}.3dscene`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            setTimeout(() => URL.revokeObjectURL(link.href), 100);
+
+        } catch (error) {
+            console.error('Save failed:', error);
+            alert(`Save failed: ${error.message}`);
+        }
+    }
+
+    async loadScene(file) {
+        const reader = new FileReader();
+        
+        reader.onload = async (e) => {
+            try {
+                this.showLoading(true);
+                const sceneData = JSON.parse(e.target.result);
+                
+                if (!sceneData.version || sceneData.version < 2) {
+                    throw new Error('Invalid or outdated scene file format');
+                }
+
+                await this.clearScene();
+
+                const loadPromises = sceneData.objects.map(async (objData) => {
+                    if (objData.type === 'wall') {
+                        this.recreateWall(objData);
+                    } else {
+                        await this.recreateFurniture(objData);
+                    }
+                });
+
+                await Promise.all(loadPromises);
+                alert('Scene loaded successfully!');
+            } catch (error) {
+                console.error('Load error:', error);
+                alert(`Load failed: ${error.message}`);
+            } finally {
+                this.showLoading(false);
+            }
+        };
+        
+        reader.readAsText(file);
+    }
+
+    async clearScene() {
+        return new Promise((resolve) => {
+            this.scene.traverse(obj => {
+                if (obj.userData?.isMovable || obj.userData?.isWall) {
+                    this.scene.remove(obj);
+                    this.disposeObject(obj);
+                }
+            });
+            this.wallManager.reset();
+            resolve();
+        });
+    }
+
+    async recreateFurniture(data) {
+        try {
+            let model;
+            if (data.userData.isChair) {
+                model = await chair(this.scene);
+            } else if (data.userData.isFurniture) {
+                model = await table(this.scene);
+            }
+
+            if (model) {
+                model.position.fromArray(data.position);
+                model.rotation.set(
+                    data.rotation.x,
+                    data.rotation.y,
+                    data.rotation.z,
+                    data.rotation.order
+                );
+                model.scale.fromArray(data.scale);
+                model.userData = data.userData;
+            }
+        } catch (error) {
+            console.error('Error recreating furniture:', error);
+            throw error;
+        }
+    }
+
+    recreateWall(data) {
+        const wall = this.wallManager.createWallFromData(data);
+        wall.position.fromArray(data.end);
+        wall.rotation.set(
+            data.rotation.x,
+            data.rotation.y,
+            data.rotation.z,
+            data.rotation.order
+        );
+        wall.userData = data.userData;
+        this.scene.add(wall);
+    }
+
+    showLoading(show) {
+        const loader = document.getElementById('loading-overlay');
+        if (loader) {
+            loader.style.display = show ? 'flex' : 'none';
         }
     }
 }

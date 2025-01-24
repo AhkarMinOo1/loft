@@ -18,8 +18,12 @@ export class WallManager {
         this.createPreviewWall();
     }
 
-    toggleAddWallMode() {
-        this.isAddWallMode = !this.isAddWallMode;
+    toggleAddWallMode(enable) {  // Modified to accept parameter
+        if (typeof enable !== 'undefined') {
+            this.isAddWallMode = enable;
+        } else {
+            this.isAddWallMode = !this.isAddWallMode;
+        }
         this.previewWall.visible = this.isAddWallMode;
         return this.isAddWallMode;
     }
@@ -100,9 +104,9 @@ export class WallManager {
             
             this.scene.add(wall);
             this.walls.push(wall);
+            this.previewWall.visible = false; // Add this line
         }
     }
-
     createWall(x, z) {
         const wallGeometry = new THREE.BoxGeometry(this.gridSize, 2, 0.2);
         const wallMaterial = new THREE.MeshPhongMaterial({ color: 0x8b8b8b });
@@ -116,11 +120,56 @@ export class WallManager {
 
         return wall;
     }
+    reset() {
+        this.walls.forEach(wall => {
+            this.scene.remove(wall);
+            this.disposeObject(wall);
+        });
+        this.walls = [];
+        this.previewWall.visible = false; // Add this line
+        this.isAddWallMode = false; // Add this line
+    }
+      createWallFromData(data) {
+        // Create wall using original parameters
+        const wall = this.createWall(
+          data.start[0], 
+          data.start[2], 
+          true // Bypass snapping
+        );
+        
+        // Set final position and rotation
+        wall.position.fromArray(data.end);
+        wall.rotation.set(
+          data.rotation.x,
+          data.rotation.y,
+          data.rotation.z,
+          data.rotation.order
+        );
+        
+        // Restore wall manager state
+        this.direction = data.direction;
+        this.currentWallStart = new THREE.Vector3().fromArray(data.start);
+        
+        return wall;
+      }
 
     wallExists(x, z) {
         return this.walls.some(wall => 
             Math.abs(wall.position.x - x) < 0.1 && 
             Math.abs(wall.position.z - z) < 0.1
         );
+    }
+    disposeObject(object) {
+        if (object === this.previewWall) return; // Prevent disposing preview wall
+        object.traverse(child => {
+            if (child.isMesh) {
+                if (child.geometry) child.geometry.dispose();
+                if (child.material) {
+                    Array.isArray(child.material) 
+                        ? child.material.forEach(m => m.dispose())
+                        : child.material.dispose();
+                }
+            }
+        });
     }
 }
