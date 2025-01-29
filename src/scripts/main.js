@@ -1,6 +1,6 @@
 import { createScene, createFloor, initializeOrbitControls } from './floor.js';
 import * as THREE from 'three';
-import { UIManager } from './UIManager.js';
+import { UIManager } from './managers/UIManager.js';  // Updated import path
 
 // Scene Setup
 const renderer = new THREE.WebGLRenderer({ 
@@ -19,7 +19,7 @@ camera.lookAt(0, 0, 0);
 
 // Scene Initialization
 const scene = createScene();
-const gridSize = 2; // Match this with your floor grid size
+const gridSize = 2;
 const floor = createFloor(20, 20, gridSize);
 scene.add(floor);
 
@@ -42,7 +42,7 @@ controls.dampingFactor = 0.05;
 // Manager Initialization
 const uiManager = new UIManager(
     scene,
-    floor,  // Pass floor reference
+    floor,
     gridSize,
     camera,
     renderer,

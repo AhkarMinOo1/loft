@@ -130,28 +130,24 @@ export class WallManager {
         this.isAddWallMode = false; // Add this line
     }
       createWallFromData(data) {
-        // Create wall using original parameters
-        const wall = this.createWall(
-          data.start[0], 
-          data.start[2], 
-          true // Bypass snapping
-        );
+        if (!data.start || !data.end) {
+            console.error('Missing wall data:', data);
+            return null;
+        }
+
+        const start = new THREE.Vector3().copy(data.start);
+        const end = new THREE.Vector3().copy(data.end);
         
-        // Set final position and rotation
-        wall.position.fromArray(data.end);
-        wall.rotation.set(
-          data.rotation.x,
-          data.rotation.y,
-          data.rotation.z,
-          data.rotation.order
-        );
-        
-        // Restore wall manager state
-        this.direction = data.direction;
-        this.currentWallStart = new THREE.Vector3().fromArray(data.start);
-        
+        // Create wall mesh
+        const wall = this.createWallMesh(start, end);
+        wall.userData = {
+            ...data.userData,
+            start: start,
+            end: end
+        };
+
         return wall;
-      }
+    }
 
     wallExists(x, z) {
         return this.walls.some(wall => 
