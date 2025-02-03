@@ -1,0 +1,219 @@
+{
+  "name": "Scene 1738601139429",
+  "data": {
+    "objects": [
+      {
+        "type": "furniture",
+        "position": [
+          -0.4912756784752672,
+          0.1,
+          1.7322857788941326
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1.6,
+          1.6,
+          1.6
+        ],
+        "userData": {
+          "isFurniture": true,
+          "isMovable": true,
+          "isRotatable": true
+        }
+      },
+      {
+        "type": "furniture",
+        "position": [
+          2.392283724405982,
+          0.1,
+          -0.2280773192318818
+        ],
+        "rotation": {
+          "x": 1.5707963267948966,
+          "y": 3.141592653589793,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          2,
+          2,
+          2
+        ],
+        "userData": {
+          "isTable": true,
+          "isMovable": true,
+          "isRotatable": true
+        }
+      },
+      {
+        "type": "furniture",
+        "position": [
+          0,
+          0.5,
+          0
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isFurniture": true,
+          "isMovable": true,
+          "isRotatable": true
+        }
+      },
+      {
+        "type": "furniture",
+        "position": [
+          -2.4689965162679846,
+          0.1,
+          -1.0030577287593467
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          2,
+          2,
+          2
+        ],
+        "userData": {
+          "isChair": true,
+          "isMovable": true,
+          "isRotatable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          -3,
+          1,
+          4
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          -3,
+          1,
+          2
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          -3,
+          1,
+          -2
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          -1,
+          1,
+          -2
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          1,
+          1,
+          -2
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true
+        }
+      }
+    ],
+    "version": 2
+  },
+  "version": 2,
+  "_id": "67a0f2b3ae47c15e7022dac8",
+  "createdAt": "2025-02-03T16:45:39.513Z",
+  "updatedAt": "2025-02-03T16:45:39.513Z",
+  "__v": 0
+}

@@ -1,0 +1,37 @@
+{
+  "name": "Scene 1738601321734",
+  "data": {
+    "objects": [
+      {
+        "type": "furniture",
+        "position": [
+          0,
+          0.1,
+          0
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          2,
+          2,
+          2
+        ],
+        "userData": {
+          "isFurniture": true,
+          "isMovable": true,
+          "isRotatable": true
+        }
+      }
+    ],
+    "version": 2
+  },
+  "version": 2,
+  "_id": "67a0f369ae47c15e7022dacc",
+  "createdAt": "2025-02-03T16:48:41.755Z",
+  "updatedAt": "2025-02-03T16:48:41.755Z",
+  "__v": 0
+}

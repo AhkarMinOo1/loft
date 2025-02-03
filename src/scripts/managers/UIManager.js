@@ -2,7 +2,7 @@ import { WallManager } from '../wallManager.js';
 import { SidebarManager } from './SidebarManager.js';
 import { FileManager } from './FileManager.js';
 import { DragManager } from './DragManager.js';
-import { chair, table } from '../asset.js';
+import { chair, table, sofa, roundTable } from '../asset.js';
 import * as THREE from 'three';
 
 export class UIManager {
@@ -166,6 +166,30 @@ export class UIManager {
         return tableModel;
     }
 
+    async createSofa() {
+        const sofaModel = await sofa(this.scene);
+        if (sofaModel) {
+            sofaModel.userData = {
+                isSofa: true,
+                isMovable: true,
+                isRotatable: true
+            };
+        }
+        return sofaModel;
+    }
+
+    async createRoundTable() {
+        const roundTableModel = await roundTable(this.scene);
+        if (roundTableModel) {
+            roundTableModel.userData = {
+                isTable: true,
+                isMovable: true,
+                isRotatable: true
+            };
+        }
+        return roundTableModel;
+    }
+
     toggleRemoveMode() {
         this.isRemoveMode = !this.isRemoveMode;
         this.removeButton.classList.toggle('active');
@@ -180,5 +204,32 @@ export class UIManager {
         if (this.loadingOverlay) {
             this.loadingOverlay.classList.toggle('active', show);
         }
+    }
+
+    initScaleControls() {
+        const scaleBtn = document.createElement('button');
+        scaleBtn.className = 'toolbar-btn';
+        scaleBtn.innerHTML = '<i class="bi bi-arrows-angle-expand"></i> Size';
+        scaleBtn.addEventListener('click', () => {
+            this.toggleScaleMode(!this.dragManager.scaleMode);
+        });
+        document.querySelector('.toolbar').appendChild(scaleBtn);
+
+        // Updated click handler
+        document.addEventListener('click', (e) => {
+            const panel = document.getElementById('scale-panel');
+            const isScaleRelated = panel.contains(e.target) || e.target === scaleBtn;
+            
+            if (!isScaleRelated) {
+                this.toggleScaleMode(false);
+                this.dragManager.hideScalePanel();
+            }
+        });
+    }
+
+    toggleScaleMode(enable) {
+        this.dragManager.scaleMode = enable;
+        this.renderer.domElement.style.cursor = enable ? 'pointer' : 'default';
+        if (!enable) this.dragManager.hideScalePanel();
     }
 }

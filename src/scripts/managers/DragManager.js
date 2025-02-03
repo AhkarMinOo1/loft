@@ -10,6 +10,9 @@ export class DragManager {
         this.offset = new THREE.Vector3();
         this.plane = new THREE.Plane(new THREE.Vector3(0, 1, 0), 0);
         this.previousMousePosition = new THREE.Vector2();
+        this.scaleMode = false;
+        this.scaleStartPosition = new THREE.Vector2();
+        this.originalScale = new THREE.Vector3();
 
         // Bind methods
         this.handleMouseMove = this.handleMouseMove.bind(this);
@@ -200,5 +203,85 @@ export class DragManager {
             this.selectedObject = null;
             this.ui.controls.enabled = true;
         }
+    }
+
+    handleScaleStart(event) {
+        event.stopPropagation();
+        
+        const raycaster = createRaycaster(event, this.ui.camera, this.ui.renderer.domElement);
+        const intersects = raycaster.intersectObjects(this.ui.scene.children, true);
+        
+        if (intersects.length > 0) {
+            this.selectedObject = this.findMovableParent(intersects[0].object);
+            if (this.selectedObject) {
+                this.showScalePanel();
+                this.highlightObject(this.selectedObject);
+            }
+        }
+    }
+
+    showScalePanel() {
+        const panel = document.getElementById('scale-panel');
+        panel.style.display = 'block';
+        
+        // Keep reference to current object
+        this.currentScaledObject = this.selectedObject;
+        
+        // Set initial slider value
+        document.getElementById('scale-slider').value = this.selectedObject.scale.x;
+        
+        // Add event listeners
+        panel.querySelectorAll('.size-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const scale = parseFloat(e.target.dataset.scale);
+                this.applyScale(scale);
+            });
+        });
+
+        document.getElementById('scale-slider').addEventListener('input', (e) => {
+            this.applyScale(parseFloat(e.target.value));
+        });
+    }
+
+    applyScale(scale) {
+        this.selectedObject.scale.set(scale, scale, scale);
+        this.selectedObject.traverse(child => {
+            if (child.isMesh) {
+                child.geometry.computeBoundingBox();
+            }
+        });
+        this.resetHighlight();
+    }
+
+    highlightObject(object) {
+        object.traverse(child => {
+            if (child.isMesh) {
+                child.material.emissive = new THREE.Color(0x007bff);
+                child.material.emissiveIntensity = 0.3;
+            }
+        });
+    }
+
+    resetHighlight() {
+        if (this.selectedObject) {
+            this.selectedObject.traverse(child => {
+                if (child.isMesh) {
+                    child.material.emissive.setHex(0x000000);
+                    child.material.emissiveIntensity = 0;
+                }
+            });
+        }
+    }
+
+    toggleScaleMode(enable) {
+        this.scaleMode = enable;
+        this.ui.renderer.domElement.style.cursor = enable ? 'ew-resize' : 'default';
+    }
+
+    hideScalePanel() {
+        const panel = document.getElementById('scale-panel');
+        panel.style.display = 'none';
+        this.resetHighlight();
+        this.currentScaledObject = null;
     }
 }

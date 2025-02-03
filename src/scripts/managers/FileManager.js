@@ -254,6 +254,10 @@ export class FileManager {
                     model = await this.ui.createChair();
                 } else if (data.userData.isFurniture) {
                     model = await this.ui.createTable();
+                } else if (data.userData.isSofa) {
+                    model = await this.ui.createSofa();
+                } else if (data.userData.isTable) {
+                    model = await this.ui.createRoundTable();
                 }
             }
 
@@ -264,6 +268,7 @@ export class FileManager {
                     data.rotation.y,
                     data.rotation.z
                 );
+                model.scale.fromArray(data.scale);
                 model.userData = {
                     ...data.userData,
                     isInteractable: !isViewOnly

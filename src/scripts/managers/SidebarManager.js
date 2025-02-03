@@ -1,4 +1,4 @@
-import { chair, table } from '../asset.js';
+import { chair, table, sofa, roundTable } from '../asset.js';
 
 export class SidebarManager {
     constructor(uiManager) {
@@ -48,6 +48,38 @@ export class SidebarManager {
                                 tableModel.position.set(0, 0.5, 0);
                                 tableModel.userData = {
                                     isFurniture: true,
+                                    isMovable: true,
+                                    isRotatable: true
+                                };
+                            }
+                        }
+                    },
+                    {
+                        name: "Sofa",
+                        thumbnail: "./assets/thumbnails/sofa.jpg",
+                        icon: "bi-sofa",
+                        action: async () => {
+                            const sofaModel = await this.ui.createSofa();
+                            if (sofaModel) {
+                                sofaModel.position.set(0, 0.5, 0);
+                                sofaModel.userData = {
+                                    isSofa: true,
+                                    isMovable: true,
+                                    isRotatable: true
+                                };
+                            }
+                        }
+                    },
+                    {
+                        name: "Round Table",
+                        thumbnail: "./assets/thumbnails/roundTable.jpg",
+                        icon: "bi-lightbulb",
+                        action: async () => {
+                            const roundTableModel = await this.ui.createRoundTable();
+                            if (roundTableModel) {
+                                roundTableModel.position.set(0, 0.5, 0);
+                                roundTableModel.userData = {
+                                    isTable: true,
                                     isMovable: true,
                                     isRotatable: true
                                 };

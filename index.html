@@ -52,6 +52,17 @@
             </button>
         </div>
     </main>
+    <div id="scale-panel" class="tool-panel">
+        <div class="preset-sizes">
+            <button class="size-btn small" data-scale="0.5">S</button>
+            <button class="size-btn medium" data-scale="1">M</button>
+            <button class="size-btn large" data-scale="1.5">L</button>
+        </div>
+        <div class="size-slider">
+            <input type="range" min="0.5" max="2" step="0.1" value="1" id="scale-slider">
+            <label for="scale-slider">Size Adjust</label>
+        </div>
+    </div>
 
     <!-- Loading Overlay -->
     <div class="loading-overlay" id="loading-overlay">

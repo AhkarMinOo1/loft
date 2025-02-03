@@ -1,6 +1,7 @@
 import { createScene, createFloor, initializeOrbitControls } from './floor.js';
 import * as THREE from 'three';
 import { UIManager } from './managers/UIManager.js';  // Updated import path
+import { DragManager } from './managers/DragManager.js';
 
 // Scene Setup
 const renderer = new THREE.WebGLRenderer({ 
@@ -49,6 +50,9 @@ const uiManager = new UIManager(
     controls
 );
 
+const dragManager = new DragManager(uiManager);
+uiManager.dragManager = dragManager;
+
 // Animation Loop
 function animate() {
     requestAnimationFrame(animate);
@@ -66,3 +70,11 @@ window.addEventListener('resize', () => {
 
 // Prevent right-click menu
 renderer.domElement.addEventListener('contextmenu', (e) => e.preventDefault());
+
+// Add scale event listener
+renderer.domElement.addEventListener('click', (e) => {
+    if (dragManager.scaleMode) dragManager.handleScaleStart(e);
+});
+
+// Initialize scale controls
+uiManager.initScaleControls();

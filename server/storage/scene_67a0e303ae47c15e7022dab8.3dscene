@@ -1,0 +1,85 @@
+{
+  "name": "Scene 1738597122206",
+  "data": {
+    "objects": [
+      {
+        "type": "furniture",
+        "position": [
+          -0.41496662774616505,
+          0.1,
+          2.4112796514509536
+        ],
+        "rotation": {
+          "x": 1.5707963267948966,
+          "y": 3.141592653589793,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isTable": true,
+          "isMovable": true,
+          "isRotatable": true
+        }
+      },
+      {
+        "type": "furniture",
+        "position": [
+          -1.0733827154769935,
+          0.1,
+          0.38657274443400436
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isSofa": true,
+          "isMovable": true,
+          "isRotatable": true
+        }
+      },
+      {
+        "type": "furniture",
+        "position": [
+          0.6279656249868028,
+          0.1,
+          0.22429957836409098
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isChair": true,
+          "isMovable": true,
+          "isRotatable": true
+        }
+      }
+    ],
+    "version": 2
+  },
+  "version": 2,
+  "_id": "67a0e303ae47c15e7022dab8",
+  "createdAt": "2025-02-03T15:38:43.584Z",
+  "updatedAt": "2025-02-03T15:38:43.584Z",
+  "__v": 0
+}
