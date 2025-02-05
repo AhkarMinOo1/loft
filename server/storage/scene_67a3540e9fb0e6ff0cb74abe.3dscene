@@ -1,0 +1,255 @@
+{
+  "name": "Scene 1738757134433",
+  "data": {
+    "objects": [
+      {
+        "type": "wall",
+        "position": [
+          3,
+          1,
+          4
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "05447c8f-8c9a-4041-8f67-f4091ffe7e47"
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          1,
+          1,
+          4
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "a3b76646-5558-44a8-8fb0-bfc6d358f507"
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          -1,
+          1,
+          4
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "0f166cb3-27a9-4c86-ac6d-b9e3bd04063b"
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          -3,
+          1,
+          4
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "633dcbb9-3707-4b09-bf5d-fc2f03f3feac"
+        }
+      },
+      {
+        "type": "door",
+        "position": [
+          -2.4023023185611496,
+          1.775684188134802,
+          8.100000001490116
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isDoor": true,
+          "parentWallId": "0f166cb3-27a9-4c86-ac6d-b9e3bd04063b",
+          "isInteractable": true,
+          "uuid": "0a82b6df-8f42-48ef-96d9-86bb2dc382c3"
+        }
+      },
+      {
+        "type": "door",
+        "position": [
+          -1.4289044866529395,
+          2.174865352881551,
+          8.100000001490116
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isDoor": true,
+          "parentWallId": "0f166cb3-27a9-4c86-ac6d-b9e3bd04063b",
+          "isInteractable": true,
+          "uuid": "8af38288-d140-465c-89c4-28b061b9b85c"
+        }
+      },
+      {
+        "type": "door",
+        "position": [
+          1.9959004209911368,
+          2.2425152202353056,
+          8.100000001490116
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isDoor": true,
+          "parentWallId": "a3b76646-5558-44a8-8fb0-bfc6d358f507",
+          "isInteractable": true,
+          "uuid": "b156d108-e779-45d9-96c2-60baa23e8e32"
+        }
+      },
+      {
+        "type": "door",
+        "position": [
+          5.217863920075078,
+          2.5023785781823653,
+          8.100000001490116
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isDoor": true,
+          "parentWallId": "05447c8f-8c9a-4041-8f67-f4091ffe7e47",
+          "isInteractable": true,
+          "uuid": "28b8af8f-9e94-4fa8-a660-b914152d2236"
+        }
+      },
+      {
+        "type": "window",
+        "position": [
+          -3.0038623480044553,
+          0.6091018154298329,
+          4.100000001490116
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWindow": true,
+          "isInteractable": true,
+          "uuid": "670e7cc9-e8be-4a4a-b467-da59492f63b6",
+          "parentWallId": "633dcbb9-3707-4b09-bf5d-fc2f03f3feac"
+        }
+      },
+      {
+        "type": "window",
+        "position": [
+          0.7990725526593359,
+          1.696748693367363,
+          4.100000001490116
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWindow": true,
+          "isInteractable": true,
+          "uuid": "77156085-5072-4677-9fc0-42a2679be266",
+          "parentWallId": "a3b76646-5558-44a8-8fb0-bfc6d358f507"
+        }
+      }
+    ],
+    "version": 2
+  },
+  "version": 2,
+  "_id": "67a3540e9fb0e6ff0cb74abe",
+  "createdAt": "2025-02-05T12:05:34.441Z",
+  "updatedAt": "2025-02-05T12:05:34.441Z",
+  "__v": 0
+}

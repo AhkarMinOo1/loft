@@ -1,0 +1,366 @@
+{
+  "name": "Scene 1738735177099",
+  "data": {
+    "objects": [
+      {
+        "type": "wall",
+        "position": [
+          -1,
+          1,
+          4
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "1f243887-2857-4d9f-97e8-db136c39793a"
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          -1,
+          1,
+          2
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "fff05682-b971-4894-bb00-094bbf254500"
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          -1,
+          1,
+          -2
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "dd399cc1-5916-4716-aed6-d4c0b27b0d0f"
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          -1,
+          1,
+          0
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "28546107-da1b-4915-b6a9-43e9021b6fc9"
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          -3,
+          1,
+          0
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "6e4fee9d-0884-49f8-b075-b59d1b4fdaeb"
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          -3,
+          1,
+          2
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "efb53c3d-a0c5-46a9-be40-f88be1ac5952"
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          -3,
+          1,
+          4
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "8bcd9298-e437-4992-b828-3a76e8e35710"
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          -3,
+          1,
+          -2
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "6b3a2abb-bd5c-4b99-b716-ad5e356e5edc"
+        }
+      },
+      {
+        "type": "door",
+        "position": [
+          -2.288911789528873,
+          0.6476275765347257,
+          0.10000000149011612
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isDoor": true,
+          "uuid": "c7714cfc-ac33-431e-a619-7c110605578c"
+        }
+      },
+      {
+        "type": "door",
+        "position": [
+          -2.0015026327422483,
+          0.27852947572877085,
+          2.100000001490116
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isDoor": true,
+          "uuid": "6a68c8e7-eb8b-4c8a-aef3-4f9ad1e25979"
+        }
+      },
+      {
+        "type": "door",
+        "position": [
+          -2.116841871112065,
+          0.4693901720220115,
+          4.100000001490116
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isDoor": true,
+          "uuid": "a9fb626d-ad23-4901-a5e6-067eba82c222"
+        }
+      },
+      {
+        "type": "window",
+        "position": [
+          -3.2962625206737703,
+          1.2250110320580339,
+          4.100000001490116
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWindow": true,
+          "isInteractable": true,
+          "uuid": "7b6e026c-94fc-47b6-9c11-9f74afd6549a",
+          "parentWallId": "8bcd9298-e437-4992-b828-3a76e8e35710"
+        }
+      },
+      {
+        "type": "window",
+        "position": [
+          -3.2522969188992716,
+          0.9203789800112698,
+          2.100000001490116
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWindow": true,
+          "isInteractable": true,
+          "uuid": "84811640-4f97-4b6d-920d-efa4caa3802c",
+          "parentWallId": "efb53c3d-a0c5-46a9-be40-f88be1ac5952"
+        }
+      },
+      {
+        "type": "window",
+        "position": [
+          -3.5071787664561516,
+          1.1383803385813085,
+          0.10000000149011612
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWindow": true,
+          "isInteractable": true,
+          "uuid": "efbd0810-9e99-4d53-b5f7-aeb809582cee",
+          "parentWallId": "6e4fee9d-0884-49f8-b075-b59d1b4fdaeb"
+        }
+      },
+      {
+        "type": "window",
+        "position": [
+          -2.9497597090093546,
+          0.9813307641864357,
+          -1.8999999985098839
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWindow": true,
+          "isInteractable": true,
+          "uuid": "c7bcc6bb-09dd-4507-b304-1bc670e428f9",
+          "parentWallId": "6b3a2abb-bd5c-4b99-b716-ad5e356e5edc"
+        }
+      }
+    ],
+    "version": 2
+  },
+  "version": 2,
+  "_id": "67a2fe49aa01d559617bfd42",
+  "createdAt": "2025-02-05T05:59:37.137Z",
+  "updatedAt": "2025-02-05T05:59:37.137Z",
+  "__v": 0
+}

@@ -1,0 +1,266 @@
+{
+  "name": "Scene 1738607650129",
+  "data": {
+    "objects": [
+      {
+        "type": "wall",
+        "position": [
+          1,
+          1,
+          4
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          1,
+          1,
+          0
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          3,
+          1,
+          -2
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          3,
+          1,
+          2
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          5,
+          1,
+          2
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          -1,
+          1,
+          0
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "door",
+        "position": [
+          2.3348556782488092,
+          0.7597924667481388,
+          2.100000001490116
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isDoor": true,
+          "uuid": "6702d816-39de-4f5e-ab54-d21eeb1c0e35"
+        }
+      },
+      {
+        "type": "door",
+        "position": [
+          4.271804976059004,
+          1.0662276017430248,
+          2.100000001490116
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isDoor": true,
+          "uuid": "c98fcd5c-1f4d-44ed-b90b-e00daa572c35"
+        }
+      },
+      {
+        "type": "door",
+        "position": [
+          4.945480902696522,
+          1.0584817056651277,
+          2.100000001490116
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isDoor": true,
+          "uuid": "382f2666-29ed-4ffe-815a-97d9038b73a5"
+        }
+      },
+      {
+        "type": "window",
+        "position": [
+          0.6848758260173282,
+          1.6002869126074195,
+          0.10000000149011701
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWindow": true,
+          "uuid": "00151dbd-f790-4285-9375-c4b1e5bdb2c7"
+        }
+      },
+      {
+        "type": "window",
+        "position": [
+          -0.8422227679467156,
+          0.9172920710187062,
+          0.10000000149011612
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWindow": true,
+          "uuid": "f2db26f4-f5d8-41b3-8c19-7ae116525d59"
+        }
+      }
+    ],
+    "version": 2
+  },
+  "version": 2,
+  "_id": "67a10c22ae47c15e7022db16",
+  "createdAt": "2025-02-03T18:34:10.143Z",
+  "updatedAt": "2025-02-03T18:34:10.144Z",
+  "__v": 0
+}

@@ -1,0 +1,187 @@
+{
+  "name": "Scene 1738606920143",
+  "data": {
+    "objects": [
+      {
+        "type": "wall",
+        "uuid": "72bd3626-978d-4eb9-ab7d-1e0a51494b1b",
+        "position": [
+          1,
+          1,
+          4
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true
+        }
+      },
+      {
+        "type": "wall",
+        "uuid": "b33c480f-5cdd-4fcc-a180-7d9244323b7c",
+        "position": [
+          1,
+          1,
+          0
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true
+        }
+      },
+      {
+        "type": "wall",
+        "uuid": "057ded04-3794-4295-8996-5bf40a22bc64",
+        "position": [
+          3,
+          1,
+          -2
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true
+        }
+      },
+      {
+        "type": "wall",
+        "uuid": "0af56c4f-bc68-4416-85de-d51bdc319731",
+        "position": [
+          3,
+          1,
+          2
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true
+        }
+      },
+      {
+        "type": "wall",
+        "uuid": "06550179-28bc-4209-ad39-8a8619a71e03",
+        "position": [
+          5,
+          1,
+          2
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true
+        }
+      },
+      {
+        "type": "wall",
+        "uuid": "1e4f8c8f-146a-46c7-ace6-5a7ea6cfb96a",
+        "position": [
+          -1,
+          1,
+          0
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true
+        }
+      }
+    ],
+    "walls": [
+      {
+        "uuid": "72bd3626-978d-4eb9-ab7d-1e0a51494b1b",
+        "openings": []
+      },
+      {
+        "uuid": "b33c480f-5cdd-4fcc-a180-7d9244323b7c",
+        "openings": []
+      },
+      {
+        "uuid": "057ded04-3794-4295-8996-5bf40a22bc64",
+        "openings": []
+      },
+      {
+        "uuid": "0af56c4f-bc68-4416-85de-d51bdc319731",
+        "openings": [
+          {
+            "type": "door",
+            "uuid": "54b1662e-4084-4433-add3-f7aa31ea9c81"
+          }
+        ]
+      },
+      {
+        "uuid": "06550179-28bc-4209-ad39-8a8619a71e03",
+        "openings": []
+      },
+      {
+        "uuid": "1e4f8c8f-146a-46c7-ace6-5a7ea6cfb96a",
+        "openings": [
+          {
+            "type": "door",
+            "uuid": "73a5caa3-4121-4083-9e3f-5aef4f7d1dc4"
+          }
+        ]
+      }
+    ],
+    "version": 3
+  },
+  "version": 2,
+  "_id": "67a10948ae47c15e7022daf6",
+  "createdAt": "2025-02-03T18:22:00.169Z",
+  "updatedAt": "2025-02-03T18:22:00.169Z",
+  "__v": 0
+}

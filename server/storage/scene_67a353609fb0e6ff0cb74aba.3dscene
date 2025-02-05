@@ -1,0 +1,201 @@
+{
+  "name": "Scene 1738756960211",
+  "data": {
+    "objects": [
+      {
+        "type": "wall",
+        "position": [
+          3,
+          1,
+          2
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "17ca4cbb-bc96-4878-b22d-4a5a16aa8429"
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          1,
+          1,
+          2
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "a684e7a6-2975-467e-854f-307b75066f3f"
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          -3,
+          1,
+          2
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "552fe001-a8b4-4ba9-8b61-f66e7de8a4f8"
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          -1,
+          1,
+          2
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "8ce5ef59-96c9-4207-adb4-83086205c8ee"
+        }
+      },
+      {
+        "type": "door",
+        "position": [
+          -3.0135815083580066,
+          0.6967384674972728,
+          2.100000001490116
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isDoor": true,
+          "uuid": "a1ed2a9e-6591-47be-ab08-82159e7f2264"
+        }
+      },
+      {
+        "type": "door",
+        "position": [
+          -1.462054627306884,
+          0.8248847739974252,
+          2.100000001490116
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isDoor": true,
+          "uuid": "4271e1c9-8699-4ba1-88e8-a24ce920a698"
+        }
+      },
+      {
+        "type": "window",
+        "position": [
+          0.5374520453370231,
+          0.7661668150107346,
+          2.100000001490116
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWindow": true,
+          "isInteractable": true,
+          "uuid": "37625041-f658-41da-ab34-ffed7163ec8f",
+          "parentWallId": "a684e7a6-2975-467e-854f-307b75066f3f"
+        }
+      },
+      {
+        "type": "window",
+        "position": [
+          2.1953214196730313,
+          0.8578049344696277,
+          2.100000001490116
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWindow": true,
+          "isInteractable": true,
+          "uuid": "8310a55f-5c96-4ff3-a680-1ebf18f69d40",
+          "parentWallId": "17ca4cbb-bc96-4878-b22d-4a5a16aa8429"
+        }
+      }
+    ],
+    "version": 2
+  },
+  "version": 2,
+  "_id": "67a353609fb0e6ff0cb74aba",
+  "createdAt": "2025-02-05T12:02:40.220Z",
+  "updatedAt": "2025-02-05T12:02:40.220Z",
+  "__v": 0
+}

@@ -1,0 +1,243 @@
+{
+  "name": "Scene 1738607763099",
+  "data": {
+    "objects": [
+      {
+        "type": "wall",
+        "position": [
+          1,
+          1,
+          4
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          1,
+          1,
+          0
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          3,
+          1,
+          -2
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          3,
+          1,
+          2
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          5,
+          1,
+          2
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          -1,
+          1,
+          0
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "door",
+        "position": [
+          1.4499256319986786,
+          1.5292014549638422,
+          0.10000000149011612
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isDoor": true,
+          "uuid": "1a3bcfff-9745-4429-b8d8-beaa03e8f182"
+        }
+      },
+      {
+        "type": "door",
+        "position": [
+          3.6805556080632913,
+          0.9615123261869245,
+          2.100000001490116
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isDoor": true,
+          "uuid": "2b31555a-29f5-442c-809f-8cb66239c22b"
+        }
+      },
+      {
+        "type": "window",
+        "position": [
+          0.7839980129263235,
+          1.2158619901110859,
+          4.100000001490116
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWindow": true,
+          "uuid": "7cb8e6f9-0fe3-448d-a6d1-f5e73402b970"
+        }
+      },
+      {
+        "type": "window",
+        "position": [
+          -0.6874630012473553,
+          0.9423263740226222,
+          0.10000000149011612
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWindow": true,
+          "uuid": "d7ebbf4b-0d94-4cfb-94e5-8d1a8f794126"
+        }
+      }
+    ],
+    "version": 2
+  },
+  "version": 2,
+  "_id": "67a10c93ae47c15e7022db1c",
+  "createdAt": "2025-02-03T18:36:03.114Z",
+  "updatedAt": "2025-02-03T18:36:03.114Z",
+  "__v": 0
+}

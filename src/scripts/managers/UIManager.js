@@ -4,6 +4,8 @@ import { FileManager } from './FileManager.js';
 import { DragManager } from './DragManager.js';
 import { chair, table, sofa, roundTable } from '../asset.js';
 import * as THREE from 'three';
+import { DoorManager } from './DoorManager.js';
+import { WindowManager } from './WindowManager.js';
 
 export class UIManager {
     constructor(scene, floor, gridSize, camera, renderer, controls) {
@@ -14,6 +16,8 @@ export class UIManager {
         this.renderer = renderer;
         this.controls = controls;
         this.isRemoveMode = false;
+        this.doorBtn = null;
+        this.windowBtn = null;
 
         // Check if we're in view-only mode from URL parameter
         const urlParams = new URLSearchParams(window.location.search);
@@ -34,6 +38,8 @@ export class UIManager {
         this.dragManager = new DragManager(this);
         this.sidebarManager = new SidebarManager(this);
         this.fileManager = new FileManager(this);
+        this.doorManager = new DoorManager(this.scene, this.wallManager, this.renderer);
+        this.windowManager = new WindowManager(this.scene, this.wallManager, this.renderer);
 
         // If view-only mode, load the specified scene
         const sceneId = urlParams.get('scene');
@@ -43,6 +49,7 @@ export class UIManager {
 
         this.initializeUI();
         this.initializeEventListeners();
+        this.initStructureControls();
     }
 
     initializeUI() {
@@ -69,6 +76,10 @@ export class UIManager {
                 if (intersects.length > 0) {
                     this.wallManager.updatePreviewWall(intersects[0].point);
                 }
+            } else if (this.doorManager.isPlacementMode) {
+                this.doorManager.updatePreview(this.camera, event);
+            } else if (this.windowManager.isPlacementMode) {
+                this.windowManager.updatePreview(this.camera, event);
             } else {
                 this.dragManager.handleMouseMove(event);
             }
@@ -79,6 +90,10 @@ export class UIManager {
                 this.handleRemoveObject(event);
             } else if (this.wallManager.isAddWallMode) {
                 this.wallManager.handleMouseDown(event, this.camera);
+            } else if (this.doorManager.isPlacementMode) {
+                this.doorManager.placeDoor(this.camera, event);
+            } else if (this.windowManager.isPlacementMode) {
+                this.windowManager.placeWindow(this.camera, event);
             } else {
                 this.dragManager.handleMouseDown(event);
             }
@@ -134,7 +149,12 @@ export class UIManager {
     findRemovableParent(object) {
         let current = object;
         while (current) {
-            if (current.userData && (current.userData.isMovable || current.userData.isWall)) {
+            if (current.userData && 
+                (current.userData.isWall || 
+                 current.userData.isChair ||
+                 current.userData.isFurniture ||
+                 current.userData.isDoor ||
+                 current.userData.isWindow)) {
                 return current;
             }
             current = current.parent;
@@ -231,5 +251,50 @@ export class UIManager {
         this.dragManager.scaleMode = enable;
         this.renderer.domElement.style.cursor = enable ? 'pointer' : 'default';
         if (!enable) this.dragManager.hideScalePanel();
+    }
+
+    initStructureControls() {
+        // Door Button
+        this.doorBtn = document.createElement('button');
+        this.doorBtn.className = 'toolbar-btn';
+        this.doorBtn.innerHTML = '<i class="bi bi-door-open"></i> Door';
+        this.doorBtn.addEventListener('click', () => {
+            this.toggleDoorMode(!this.doorManager.isPlacementMode);
+        });
+
+        // Window Button
+        this.windowBtn = document.createElement('button');
+        this.windowBtn.className = 'toolbar-btn';
+        this.windowBtn.innerHTML = '<i class="bi bi-window"></i> Window';
+        this.windowBtn.addEventListener('click', () => {
+            this.toggleWindowMode(!this.windowManager.isPlacementMode);
+        });
+
+        document.querySelector('.toolbar').appendChild(this.doorBtn);
+        document.querySelector('.toolbar').appendChild(this.windowBtn);
+    }
+
+    toggleDoorMode(enable) {
+        this.doorManager.isPlacementMode = enable;
+        this.windowManager.isPlacementMode = false;
+        this.wallManager.toggleAddWallMode(false);
+        this.renderer.domElement.style.cursor = enable ? 'crosshair' : 'default';
+        this.doorBtn.classList.toggle('active-door', enable);
+        
+        if (!enable) {
+            this.doorManager.previewDoor.visible = false;
+        }
+    }
+
+    toggleWindowMode(enable) {
+        this.windowManager.isPlacementMode = enable;
+        this.doorManager.isPlacementMode = false;
+        this.wallManager.toggleAddWallMode(false);
+        this.renderer.domElement.style.cursor = enable ? 'crosshair' : 'default';
+        this.windowBtn.classList.toggle('active-window', enable);
+        
+        if (!enable) {
+            this.windowManager.previewWindow.visible = false;
+        }
     }
 }

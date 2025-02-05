@@ -16,6 +16,7 @@ export class WallManager {
 
         // Initialize preview wall
         this.createPreviewWall();
+        this.initPreviews();
     }
 
     toggleAddWallMode(enable) {  // Modified to accept parameter
@@ -168,4 +169,94 @@ export class WallManager {
             }
         });
     }
+
+
+
+    initPreviews() {
+        // Door preview
+        const doorGeometry = new THREE.BoxGeometry(1.2, 2.4, 0.2);
+        const doorMaterial = new THREE.MeshBasicMaterial({
+            color: 0x8B4513,
+            transparent: true,
+            opacity: 0.5,
+            depthTest: false,
+            renderOrder: 1
+        });
+        this.previewDoor = new THREE.Mesh(doorGeometry, doorMaterial);
+        this.previewDoor.renderOrder = 1;
+        this.previewDoor.visible = false;
+
+        // Window preview
+        const windowGeometry = new THREE.BoxGeometry(1.5, 1.2, 0.2);
+        const windowMaterial = new THREE.MeshBasicMaterial({
+            color: 0x87CEEB,
+            transparent: true,
+            opacity: 0.5,
+            depthTest: false,
+            renderOrder: 1
+        });
+        this.previewWindow = new THREE.Mesh(windowGeometry, windowMaterial);
+        this.previewWindow.renderOrder = 1;
+        this.previewWindow.visible = false;
+
+        this.scene.add(this.previewDoor);
+        this.scene.add(this.previewWindow);
+    }
+
+    updateStructuralPreviews(camera) {
+        return (e) => {
+            const rect = this.renderer.domElement.getBoundingClientRect();
+            const mouse = new THREE.Vector2(
+                ((e.clientX - rect.left) / rect.width) * 2 - 1,
+                -((e.clientY - rect.top) / rect.height) * 2 + 1
+            );
+
+            const raycaster = new THREE.Raycaster();
+            raycaster.setFromCamera(mouse, camera);
+            
+            const intersects = raycaster.intersectObjects(
+                this.scene.children.filter(obj => obj.userData.isWall)
+            );
+
+            if (intersects.length > 0) {
+                const wall = intersects[0].object;
+                const point = intersects[0].point;
+                
+                if (this.isDoorPlacementMode) {
+                    this.previewDoor.visible = true;
+                    this.previewDoor.position.copy(point);
+                    this.previewDoor.quaternion.copy(wall.quaternion);
+                } else if (this.isWindowPlacementMode) {
+                    this.previewWindow.visible = true;
+                    this.previewWindow.position.copy(point);
+                    this.previewWindow.quaternion.copy(wall.quaternion);
+                }
+            } else {
+                this.previewDoor.visible = false;
+                this.previewWindow.visible = false;
+            }
+        };
+    }
+
+    clearWallPreview() {
+        if (this.previewWall) {
+            this.previewWall.visible = false;
+        }
+    }
+
+    addDoorToWall(wall, position) {
+        // Create door relative to wall's coordinate system
+        const door = this.ui.doorManager.createDoor(wall, position);
+        
+        // Explicitly store parent reference using consistent casing
+        door.userData.parentWall = wall;
+        door.userData.parentWallId = wall.uuid; 
+        
+        // Add to wall's openings
+        wall.userData.openings = wall.userData.openings || [];
+        wall.userData.openings.push(door);
+        
+        console.log('Added door to wall:', wall.uuid);
+    }
 }
+

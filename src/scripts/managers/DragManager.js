@@ -197,12 +197,10 @@ export class DragManager {
     }
 
     stopDragging() {
-        if (this.isDragging || this.isRotating) {
-            this.isDragging = false;
-            this.isRotating = false;
-            this.selectedObject = null;
-            this.ui.controls.enabled = true;
-        }
+        this.isDragging = false;
+        this.selectedObject = null;
+        this.ui.controls.enabled = true;
+        this.ui.wallManager.clearWallPreview();
     }
 
     handleScaleStart(event) {

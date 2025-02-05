@@ -102,6 +102,26 @@ export class SidebarManager {
                             this.ui.removeButton.classList.remove("active");
                             document.body.classList.remove("remove-mode");
                         }
+                    },
+                    {
+                        name: "Door",
+                        thumbnail: "./assets/thumbnails/door.jpg", 
+                        icon: "bi-door-open",
+                        action: () => {
+                            this.ui.toggleDoorMode(true);
+                            this.ui.removeButton.classList.remove("active");
+                            document.body.classList.remove("remove-mode");
+                        }
+                    },
+                    {
+                        name: "Window",
+                        thumbnail: "./assets/thumbnails/window.jpg",
+                        icon: "bi-window",
+                        action: () => {
+                            this.ui.toggleWindowMode(true);
+                            this.ui.removeButton.classList.remove("active");
+                            document.body.classList.remove("remove-mode");
+                        }
                     }
                 ]
             }

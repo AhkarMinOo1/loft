@@ -1,0 +1,178 @@
+{
+  "name": "Scene 1738734728687",
+  "data": {
+    "objects": [
+      {
+        "type": "wall",
+        "position": [
+          -1,
+          1,
+          4
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "237b6e4b-5148-46f8-95e4-d7b91eeacf4e",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          1,
+          1,
+          0
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "88594f71-b9e3-4a25-920b-f3fdc45cf9ba",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          5,
+          1,
+          0
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "a8060f83-586a-4920-b2de-78dad6eb0211",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          -1,
+          1,
+          0
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "5a86cfa2-7b57-4594-9195-7fffd1e3b180",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "door",
+        "position": [
+          -1.3946505247637035,
+          1.4464867370901793,
+          4.100000001490116
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isDoor": true,
+          "uuid": "8ac25501-7fab-44cc-9792-35e1957e5566"
+        }
+      },
+      {
+        "type": "door",
+        "position": [
+          -0.01246300593239047,
+          0.6781158918888526,
+          0.10000000149011612
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isDoor": true,
+          "uuid": "9eb51b2d-c389-4eb7-a636-a0a9812f6ddf"
+        }
+      },
+      {
+        "type": "door",
+        "position": [
+          4.4994713040718715,
+          0.861083277175279,
+          0.10000000149011612
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isDoor": true,
+          "uuid": "048f96fa-c054-41c3-9a4d-d7d4bf8b7ff7"
+        }
+      }
+    ],
+    "version": 2
+  },
+  "version": 2,
+  "_id": "67a2fc88aa01d559617bfd3e",
+  "createdAt": "2025-02-05T05:52:08.694Z",
+  "updatedAt": "2025-02-05T05:52:08.694Z",
+  "__v": 0
+}

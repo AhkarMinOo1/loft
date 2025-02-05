@@ -1,0 +1,196 @@
+{
+  "name": "Scene 1738606700696",
+  "data": {
+    "objects": [
+      {
+        "type": "wall",
+        "uuid": "6ef43147-f0a0-43bd-b12b-892259a70533",
+        "position": [
+          -1,
+          1,
+          6
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true
+        }
+      },
+      {
+        "type": "wall",
+        "uuid": "4865383e-24f9-46f9-acfa-00d1d8f3d1c4",
+        "position": [
+          -1,
+          1,
+          2
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true
+        }
+      },
+      {
+        "type": "wall",
+        "uuid": "b0f95f3c-609d-4dde-8152-abe35d075092",
+        "position": [
+          -3,
+          1,
+          6
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true
+        }
+      },
+      {
+        "type": "wall",
+        "uuid": "12406172-50e0-420b-a320-c7280251a285",
+        "position": [
+          -3,
+          1,
+          8
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true
+        }
+      },
+      {
+        "type": "wall",
+        "uuid": "f82383c1-003e-42fd-abaa-eb29bf1bcd0b",
+        "position": [
+          -5,
+          1,
+          6
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true
+        }
+      },
+      {
+        "type": "wall",
+        "uuid": "5897bd9a-2150-4c32-a8d3-2c3cae3fd1d9",
+        "position": [
+          -3,
+          1,
+          0
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true
+        }
+      }
+    ],
+    "walls": [
+      {
+        "uuid": "6ef43147-f0a0-43bd-b12b-892259a70533",
+        "openings": []
+      },
+      {
+        "uuid": "4865383e-24f9-46f9-acfa-00d1d8f3d1c4",
+        "openings": [
+          {
+            "type": "window",
+            "uuid": "fcc6b862-927e-4186-86c2-9487fcc6ba7f"
+          }
+        ]
+      },
+      {
+        "uuid": "b0f95f3c-609d-4dde-8152-abe35d075092",
+        "openings": []
+      },
+      {
+        "uuid": "12406172-50e0-420b-a320-c7280251a285",
+        "openings": []
+      },
+      {
+        "uuid": "f82383c1-003e-42fd-abaa-eb29bf1bcd0b",
+        "openings": [
+          {
+            "type": "door",
+            "uuid": "d610c362-439c-469b-91aa-09b0fdca3c55"
+          },
+          {
+            "type": "door",
+            "uuid": "e37bc224-b815-4d3e-9736-c051682540db"
+          }
+        ]
+      },
+      {
+        "uuid": "5897bd9a-2150-4c32-a8d3-2c3cae3fd1d9",
+        "openings": [
+          {
+            "type": "window",
+            "uuid": "9290e928-2626-4247-9e5b-bce08a6d9262"
+          }
+        ]
+      }
+    ],
+    "version": 3
+  },
+  "version": 2,
+  "_id": "67a1086cae47c15e7022daee",
+  "createdAt": "2025-02-03T18:18:20.734Z",
+  "updatedAt": "2025-02-03T18:18:20.734Z",
+  "__v": 0
+}

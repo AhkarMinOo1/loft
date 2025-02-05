@@ -1,0 +1,205 @@
+{
+  "name": "Scene 1738757427234",
+  "data": {
+    "objects": [
+      {
+        "type": "wall",
+        "position": [
+          -3,
+          1,
+          2
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "acb933b4-1240-4cf9-89e1-7ba9261d5fc3"
+        }
+      },
+      {
+        "type": "door",
+        "position": [
+          0.7160791476423949,
+          -0.08548270938881508,
+          0.10000000149011612
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isDoor": true,
+          "parentWallId": "acb933b4-1240-4cf9-89e1-7ba9261d5fc3",
+          "isInteractable": true,
+          "uuid": "fe880011-810f-4f21-8853-30d4e50d0807"
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          1,
+          1,
+          2
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "0fb4d43b-b131-4787-ba1b-1a6151d9da4e"
+        }
+      },
+      {
+        "type": "door",
+        "position": [
+          -0.48401288740406034,
+          -0.15301965172645637,
+          0.10000000149011612
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isDoor": true,
+          "parentWallId": "0fb4d43b-b131-4787-ba1b-1a6151d9da4e",
+          "isInteractable": true,
+          "uuid": "b30d8cb1-3da1-4ff8-b49e-2d3373c5a771"
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          -1,
+          1,
+          2
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "26f4016a-105e-4021-9c33-d785220cefb5"
+        }
+      },
+      {
+        "type": "door",
+        "position": [
+          -0.05075536747317244,
+          -0.1010960019755549,
+          0.10000000149011612
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isDoor": true,
+          "parentWallId": "26f4016a-105e-4021-9c33-d785220cefb5",
+          "isInteractable": true,
+          "uuid": "5474ed4c-6c61-4caa-8cfc-eca02c7d109c"
+        }
+      },
+      {
+        "type": "door",
+        "position": [
+          0.838760692179152,
+          -0.22878002019086896,
+          0.10000000149011612
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isDoor": true,
+          "parentWallId": "26f4016a-105e-4021-9c33-d785220cefb5",
+          "isInteractable": true,
+          "uuid": "ae7a5e0a-fdb8-4635-964e-5514c6ee3342"
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          3,
+          1,
+          0
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "064e9fc8-ae9a-493b-8fd3-3374bd9acf89"
+        }
+      }
+    ],
+    "version": 2
+  },
+  "version": 2,
+  "_id": "67a355339fb0e6ff0cb74ac2",
+  "createdAt": "2025-02-05T12:10:27.242Z",
+  "updatedAt": "2025-02-05T12:10:27.242Z",
+  "__v": 0
+}

@@ -1,0 +1,253 @@
+{
+  "name": "Scene 1738734669974",
+  "data": {
+    "objects": [
+      {
+        "type": "wall",
+        "position": [
+          1,
+          1,
+          4
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "isInteractable": true,
+          "uuid": "8b35187c-bcdf-4505-b51f-b8a2577f8b0c"
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          1,
+          1,
+          0
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "isInteractable": true,
+          "uuid": "eee5ceb4-ab60-4460-bfee-4ff4daf224f9"
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          3,
+          1,
+          -2
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "isInteractable": true,
+          "uuid": "1caec28f-8eb8-4e68-8ee4-5ac0e864b2dc"
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          3,
+          1,
+          2
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "isInteractable": true,
+          "uuid": "81af005e-4490-4fe8-bea6-5bc921198f64"
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          5,
+          1,
+          2
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "isInteractable": true,
+          "uuid": "fc61086f-0e6a-4924-b424-7a112c7fbda3"
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          -1,
+          1,
+          0
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "isInteractable": true,
+          "uuid": "fcf98658-fe79-48f9-b725-027d1011950c"
+        }
+      },
+      {
+        "type": "door",
+        "position": [
+          1.4499256319986786,
+          1.5292014549638422,
+          0.10000000149011612
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isDoor": true,
+          "uuid": "836a60d0-69cf-4186-8ad7-71f3cfb23b12",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "door",
+        "position": [
+          3.6805556080632913,
+          0.9615123261869245,
+          2.100000001490116
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isDoor": true,
+          "uuid": "22bd0376-12a5-4467-a333-03a39104c48c",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "window",
+        "position": [
+          0.7839980129263235,
+          1.2158619901110859,
+          4.100000001490116
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWindow": true,
+          "uuid": "72ffd08d-a34f-461e-8a8c-2bd601b5ab48",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "window",
+        "position": [
+          -0.6874630012473553,
+          0.9423263740226222,
+          0.10000000149011612
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWindow": true,
+          "uuid": "c87ead59-83dd-4970-936e-824002720731",
+          "isInteractable": true
+        }
+      }
+    ],
+    "version": 2
+  },
+  "version": 2,
+  "_id": "67a2fc4daa01d559617bfd34",
+  "createdAt": "2025-02-05T05:51:09.986Z",
+  "updatedAt": "2025-02-05T05:51:09.986Z",
+  "__v": 0
+}

@@ -1,0 +1,845 @@
+{
+  "name": "Scene 1738734236816",
+  "data": {
+    "objects": [
+      {
+        "type": "wall",
+        "position": [
+          -3,
+          1,
+          6
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "f13f138b-d013-4ebd-93e4-a11f216aadb3",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          -1,
+          1,
+          6
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "c0aae76a-6826-477e-8ba3-42f222afa11d",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          1,
+          1,
+          6
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "1025748c-0a51-4c29-8de4-9ae2fc8858b5",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          3,
+          1,
+          6
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "3292d9a1-7dee-4d69-a4dc-abdac1a5b76b",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          5,
+          1,
+          6
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "2c1a249a-e716-4d39-ba39-3f3ed954566b",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          6,
+          1,
+          5
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 1.5707963267948966,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "548930df-fe1d-47bd-9bb8-a94c4bea7dd7",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          6,
+          1,
+          3
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 1.5707963267948966,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "92edefe3-5619-4d79-9199-4512854af029",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          6,
+          1,
+          1
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 1.5707963267948966,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "8752b802-54be-41cb-83ab-ad482fc2539b",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          6,
+          1,
+          -1
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 1.5707963267948966,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "978b0049-2fec-4abe-a626-2e840c744f3c",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          6,
+          1,
+          -3
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 1.5707963267948966,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "1db68a30-5f1c-4c78-9190-38606e922b2f",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          5,
+          1,
+          -4
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "da7fe8a1-4044-4933-b7c1-a5095933d996",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          3,
+          1,
+          -4
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "08229f46-9ef8-403c-8e32-b77d26242952",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          1,
+          1,
+          -4
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "7198b6e9-a5e5-4637-b5f3-5f64ff1611d3",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          -1,
+          1,
+          -4
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "47ffe1e7-a8e7-4b79-ae54-76a906c6e3d3",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          -3,
+          1,
+          -4
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "59262491-a691-4bfd-8e8d-ceabcc3be0b0",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          -5,
+          1,
+          -4
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "01d43b13-fe27-41d8-9545-7e01c26d7f38",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          -6,
+          1,
+          -3
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 1.5707963267948966,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "60e1cfcc-9983-4119-ac01-ef43bddba185",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          -6,
+          1,
+          -1
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 1.5707963267948966,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "e2ef8312-d12d-4815-8125-5ca7e3198d43",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          -6,
+          1,
+          1
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 1.5707963267948966,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "e91835fe-6eef-4b10-ab55-c41b4330042a",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          -6,
+          1,
+          3
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 1.5707963267948966,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "ed9cbc22-6b0f-4a61-bc74-891d969b2670",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          -6,
+          1,
+          5
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 1.5707963267948966,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "f31795d9-5104-40e6-af1d-0ce781e4f640",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "wall",
+        "position": [
+          -5,
+          1,
+          6
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWall": true,
+          "uuid": "e5835519-c1af-4ca6-a83f-730b71982994",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "window",
+        "position": [
+          0.3533837763438097,
+          0.9938421744058292,
+          5.899999998509884
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWindow": true,
+          "uuid": "c7e7029c-45be-4875-9102-7c81c2020795",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "window",
+        "position": [
+          0.2692509316568259,
+          1.0901653945975411,
+          -3.899999998509884
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWindow": true,
+          "uuid": "e4e20388-64d5-4338-be59-036f9850bc1b",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "furniture",
+        "position": [
+          0.8455644967504823,
+          0.1,
+          -0.28481790950645736
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0.0700000000000001,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isChair": true,
+          "isMovable": true,
+          "isRotatable": true,
+          "uuid": "05a789f7-f378-4996-856a-130355e418be",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "furniture",
+        "position": [
+          -4.927216468209891,
+          0.1,
+          -3.1858800904085207
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isSofa": true,
+          "isMovable": true,
+          "isRotatable": true,
+          "uuid": "4826d962-c471-4610-ab9d-a2e485e2c2b7",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "furniture",
+        "position": [
+          4.830589042059284,
+          0.1,
+          -3.402709344755828
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isSofa": true,
+          "isMovable": true,
+          "isRotatable": true,
+          "uuid": "c6f91403-d001-4ea9-8f4f-9622e00efffb",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "furniture",
+        "position": [
+          -4.791914819612589,
+          0.1,
+          -2.1495560851775717
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 1.6099999999999997,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1.4,
+          1.4,
+          1.4
+        ],
+        "userData": {
+          "isFurniture": true,
+          "isMovable": true,
+          "isRotatable": true,
+          "uuid": "1993d8fd-1d35-4783-a8ec-bd6ac8d9d30d",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "furniture",
+        "position": [
+          4.840027432244355,
+          0.1,
+          -2.3152068575499443
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 1.5300000000000014,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1.2,
+          1.2,
+          1.2
+        ],
+        "userData": {
+          "isFurniture": true,
+          "isMovable": true,
+          "isRotatable": true,
+          "uuid": "a1e45757-bf69-4d6c-8b37-09ddbbea6fef",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "furniture",
+        "position": [
+          0.974958189261289,
+          0.1,
+          0.8221074780583895
+        ],
+        "rotation": {
+          "x": 1.5707963267948966,
+          "y": 3.141592653589793,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isTable": true,
+          "isMovable": true,
+          "isRotatable": true,
+          "uuid": "d466c8bd-8e84-4d22-9802-8af311279859",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "furniture",
+        "position": [
+          0.8703584886483524,
+          0.1,
+          1.9344927070670357
+        ],
+        "rotation": {
+          "x": 0,
+          "y": -3.1300000000000052,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isChair": true,
+          "isMovable": true,
+          "isRotatable": true,
+          "uuid": "505b4331-14d5-49f7-8174-5ae7229c5c01",
+          "isInteractable": true
+        }
+      },
+      {
+        "type": "furniture",
+        "position": [
+          4.216342133595628,
+          0.1,
+          4.6337657990537
+        ],
+        "rotation": {
+          "x": 1.5707963267948966,
+          "y": 3.141592653589793,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isTable": true,
+          "isMovable": true,
+          "isRotatable": true,
+          "uuid": "26c19418-486c-4c66-a11e-204ee83e815c"
+        }
+      },
+      {
+        "type": "furniture",
+        "position": [
+          5.344346449791597,
+          0.1,
+          4.728707363170061
+        ],
+        "rotation": {
+          "x": 0,
+          "y": -1.6300000000000006,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isSofa": true,
+          "isMovable": true,
+          "isRotatable": true,
+          "uuid": "39454218-9aab-462d-b6c2-ce0e7137f19b"
+        }
+      },
+      {
+        "type": "window",
+        "position": [
+          5.899999998509884,
+          0.7505353075711643,
+          1.1364307634768682
+        ],
+        "rotation": {
+          "x": 0,
+          "y": 1.5707963267948966,
+          "z": 0,
+          "order": "XYZ"
+        },
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "userData": {
+          "isWindow": true,
+          "uuid": "fa17b1b3-d2b2-4884-b28a-102e9fbd4565",
+          "parentWallId": "8752b802-54be-41cb-83ab-ad482fc2539b"
+        }
+      }
+    ],
+    "version": 2
+  },
+  "version": 2,
+  "_id": "67a2fa9daa01d559617bfd20",
+  "createdAt": "2025-02-05T05:43:57.442Z",
+  "updatedAt": "2025-02-05T05:43:57.442Z",
+  "__v": 0
+}

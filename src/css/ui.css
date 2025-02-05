@@ -231,19 +231,21 @@ canvas {
     cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="%23ff0000" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>') 12 12, auto !important;
 }
 
+.remove-mode * {
+    cursor: inherit !important;
+    pointer-events: auto !important;
+}
+
+.main-content canvas {
+    pointer-events: auto !important;
+}
+
 .object-btn.remove-active {
     background: #ff4444 !important;
 }
 .wall-mode {
     cursor: crosshair !important;
 }
-
-/* Make sure the canvas is interactive */
-.main-content canvas {
-    pointer-events: auto !important;
-}
-
-/* Add these new rules to your existing ui.css */
 
 /* File Controls */
 .file-controls {
@@ -570,4 +572,21 @@ canvas {
 
 .size-btn, #scale-slider {
     pointer-events: auto !important;
+}
+
+.toolbar-btn.active-door {
+    background: #8B4513 !important;
+}
+
+.toolbar-btn.active-window {
+    background: #87CEEB !important;
+}
+
+/* Add these cursor states */
+.cursor-door {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="%238B4513" d="M12 2h8v28h-8z"/></svg>') 16 16, pointer !important;
+}
+
+.cursor-window {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect fill="%2387CEEB" x="4" y="8" width="24" height="16" rx="2"/></svg>') 16 16, pointer !important;
 }

@@ -38,11 +38,14 @@ export class FileManager {
                 }
             };
 
-            // Collect scene data
+            // Collect scene data including doors and windows
             this.ui.scene.traverse(obj => {
-                if (obj.userData?.isMovable || obj.userData?.isWall) {
+                if (obj.userData?.isMovable || obj.userData?.isWall || 
+                    obj.userData?.isDoor || obj.userData?.isWindow) {
                     const objData = {
-                        type: obj.userData.isWall ? 'wall' : 'furniture',
+                        type: obj.userData.isWall ? 'wall' : 
+                              obj.userData.isDoor ? 'door' :
+                              obj.userData.isWindow ? 'window' : 'furniture',
                         position: obj.position.toArray(),
                         rotation: {
                             x: obj.rotation.x,
@@ -51,9 +54,16 @@ export class FileManager {
                             order: obj.rotation.order
                         },
                         scale: obj.scale.toArray(),
-                        userData: obj.userData
+                        userData: {
+                            ...Object.fromEntries(
+                                Object.entries(obj.userData).filter(
+                                    ([key]) => !['parentWall', 'openings'].includes(key)
+                                )
+                            ),
+                            uuid: obj.uuid,
+                            parentWallId: obj.userData.parentWall?.uuid
+                        }
                     };
-
                     sceneData.data.objects.push(objData);
                 }
             });
@@ -165,28 +175,29 @@ export class FileManager {
         try {
             this.ui.showLoading(true);
             const response = await fetch(`${this.API_URL}/${sceneId}`);
-            
-            if (!response.ok) {
-                throw new Error('Failed to load scene');
-            }
-
             const sceneData = await response.json();
             
-            // Clear existing scene
             this.clearScene();
+            const wallMap = new Map();
 
-            // Recreate objects
-            for (const objectData of sceneData.data.objects) {
-                await this.recreateObject(objectData, isViewOnly);
+            // First pass - create walls
+            const wallData = sceneData.data.objects.filter(o => o.type === 'wall');
+            for (const objectData of wallData) {
+                const wall = await this.recreateObject(objectData, isViewOnly, wallMap);
+                if (wall) {
+                    wallMap.set(objectData.userData.uuid, wall);
+                    this.ui.wallManager.walls.push(wall);
+                }
             }
 
-            // If view only mode, disable controls and hide UI elements
-            if (isViewOnly) {
-                this.setupViewOnlyMode();
+            // Second pass - create other objects
+            const nonWallData = sceneData.data.objects.filter(o => o.type !== 'wall');
+            for (const objectData of nonWallData) {
+                await this.recreateObject(objectData, isViewOnly, wallMap);
             }
 
+            if (isViewOnly) this.setupViewOnlyMode();
             console.log('Scene loaded with', sceneData.data.objects.length, 'objects');
-
         } catch (error) {
             console.error('Load failed:', error);
             alert(`Load failed: ${error.message}`);
@@ -230,25 +241,76 @@ export class FileManager {
         document.body.appendChild(viewModeIndicator);
     }
 
-    async recreateObject(data, isViewOnly = false) {
+    async recreateObject(data, isViewOnly = false, wallMap = new Map()) {
         try {
             let model;
             if (data.type === 'wall') {
-                // Create wall with proper dimensions and position
                 const geometry = new THREE.BoxGeometry(this.ui.gridSize, 2, 0.2);
-                const material = new THREE.MeshPhongMaterial({
-                    color: 0x808080, // Gray color for walls
-                });
+                const material = new THREE.MeshPhongMaterial({ color: 0x808080 });
                 
                 model = new THREE.Mesh(geometry, material);
                 model.userData = {
                     isWall: true,
-                    isInteractable: !isViewOnly
+                    isInteractable: !isViewOnly,
+                    uuid: data.userData.uuid // Preserve original UUID
                 };
 
-                // Add to walls array
-                this.ui.wallManager.walls.push(model);
+                model.position.fromArray(data.position);
+                model.rotation.set(data.rotation.x, data.rotation.y, data.rotation.z);
+                model.scale.fromArray(data.scale);
+
                 this.ui.scene.add(model);
+                wallMap.set(data.userData.uuid, model);
+                console.log('Created wall with UUID:', data.userData.uuid);
+
+            } else if (data.type === 'door') {
+                const parentWall = wallMap.get(data.userData.parentWallId);
+                if (parentWall) {
+                    console.log('Creating door on wall:', parentWall.userData.uuid);
+                    
+                    // Use absolute position from saved data
+                    model = this.ui.doorManager.createDoorFromData(
+                        data.position, // This should be world coordinates
+                        data.rotation,
+                        parentWall
+                    );
+                    
+                    // Ensure proper material
+                    model.material = new THREE.MeshPhongMaterial({
+                        color: 0x8B4513,
+                        transparent: true,
+                        opacity: 0.8
+                    });
+                    
+                    model.userData = {
+                        ...data.userData,
+                        isInteractable: !isViewOnly,
+                        isDoor: true,
+                        parentWall: parentWall // Re-establish reference
+                    };
+                    
+                    parentWall.userData.openings = parentWall.userData.openings || [];
+                    parentWall.userData.openings.push(model);
+                } else {
+                    console.error('Parent wall not found for door:', data.userData.parentWallId);
+                }
+            } else if (data.type === 'window') {
+                const parentWall = wallMap.get(data.userData.parentWallId);
+                if (parentWall) {
+                    model = this.ui.windowManager.createWindowFromData(
+                        data.position,
+                        data.rotation,
+                        parentWall
+                    );
+                    model.userData = {
+                        ...data.userData,
+                        isInteractable: !isViewOnly,
+                        isWindow: true
+                    };
+                    this.ui.scene.add(model);
+                    parentWall.userData.openings = parentWall.userData.openings || [];
+                    parentWall.userData.openings.push(model);
+                }
             } else {
                 if (data.userData.isChair) {
                     model = await this.ui.createChair();
